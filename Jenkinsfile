@@ -21,5 +21,10 @@ pipeline {
         echo 'have a cup of tea'
       }
     }
+    stage('Ice Cream') {
+      steps {
+        echo 'Eat ice cream'
+      }
+    }
   }
 }
