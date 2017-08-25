@@ -16,5 +16,10 @@ pipeline {
         echo 'deploy'
       }
     }
+    stage('Tea') {
+      steps {
+        echo 'have a cup of tea'
+      }
+    }
   }
 }
