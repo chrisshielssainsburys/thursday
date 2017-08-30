@@ -3,7 +3,16 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'build'
+        parallel(
+          "Build": {
+            echo 'build'
+            
+          },
+          "": {
+            git(url: 'git@github.com:chrisshielssainsburys/thursday.git', branch: 'master')
+            
+          }
+        )
       }
     }
     stage('Test') {
