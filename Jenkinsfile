@@ -8,8 +8,8 @@ pipeline {
             echo 'build'
             
           },
-          "": {
-            git(url: 'git@github.com:chrisshielssainsburys/thursday.git', branch: 'master')
+          "Checkout": {
+            git(url: 'git@github.com:chrisshielssainsburys/thursday.git', branch: 'master', credentialsId: 'JSainsburyPLC')
             
           }
         )
