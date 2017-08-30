@@ -26,5 +26,10 @@ pipeline {
         echo 'Eat ice cream'
       }
     }
+    stage('Beer') {
+      steps {
+        echo 'Drink beer'
+      }
+    }
   }
 }
