@@ -16,7 +16,6 @@ pipeline {
             script {
               env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
               parameters: [choice(name: 'RELEASE_SCOPE', choices: 'patch\nminor\nmajor', description: 'What is the release scope?')]
-              
             }
             
             
@@ -33,6 +32,10 @@ pipeline {
           },
           "Echo": {
             echo '${env.RELEASE_SCOPE}'
+            script {
+              echo "${env.RELEASE_SCOPE}"
+            }
+            
             
           }
         )
