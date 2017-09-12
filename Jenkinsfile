@@ -55,7 +55,19 @@ pipeline {
     }
     stage('Tea') {
       steps {
-        echo 'have a cup of tea'
+        parallel(
+          "Tea": {
+            echo 'have a cup of tea'
+            
+          },
+          "Directory": {
+            dir(path: '/tmp/cs') {
+              sh '/bin/pwd'
+            }
+            
+            
+          }
+        )
       }
     }
     stage('Ice Cream') {
