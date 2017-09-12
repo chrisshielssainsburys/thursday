@@ -12,7 +12,7 @@ pipeline {
             git(url: 'https://github.com/chrisshielssainsburys/thursday.git', branch: 'master', credentialsId: '43a673b4-ffb0-49a0-9f7f-8770fd3a8011')
             
           },
-          "": {
+          "error": {
             input(message: 'Branchname', id: 'branchname')
             
           }
@@ -44,5 +44,9 @@ pipeline {
         echo 'Drink beer'
       }
     }
+  }
+  environment {
+    hello = 'there'
+    hello2 = ''
   }
 }
