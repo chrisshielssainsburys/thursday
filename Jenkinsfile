@@ -19,10 +19,9 @@ pipeline {
                 choice(name: 'RELEASE_SCOPE',
                        choices: 'patch\nminor\nmajor',
                        description: 'What is the release scope?'),
-                text(name: 'TAG',
-                     defaultValue: 'hello',
-                     description: 'Hello',
-                     name: 'hello')
+                string(name: 'hello',
+                       defaultValue: 'hello',
+                       description: 'Hello')
               ]
             }
           }
